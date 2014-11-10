@@ -60,7 +60,7 @@ function toggle_mute(mute){
 
 function updateMetadata(){
     $.get("http://radio.ivan.moe/icecast/status-json.xsl", function(data){
-        var song = data.source.title.split(" - ");
+        var song = data.icestats.source.title.split(" - ");
         $("#player .artist").text(song.shift());
         $("#player .title").text(song.join(" - "));
     });

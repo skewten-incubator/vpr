@@ -20,7 +20,7 @@ $(function(){
     $("#player .controls .unmute").on("click", function(){
         toggle_mute(false);
     });
-    setInterval(updateMetadata, 2000);
+    setInterval(updateMetadata, 5000);
     updateMetadata();
 });
 

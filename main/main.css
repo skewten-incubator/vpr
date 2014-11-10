@@ -184,3 +184,9 @@ table tr{
 audio{
     display: none;
 }
+
+#content{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-left: 10px;
+}

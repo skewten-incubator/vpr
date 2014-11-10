@@ -37,7 +37,7 @@ function toggle_play_icon(playing){
 
 function toggle_play(play){
     if (play){
-        $("#main-audio")[0].src = "http://radio.ivan.moe:420/vaporwave-main?"+Date.now();
+        $("#main-audio")[0].src = "http://radio.ivan.moe/icecast/vaporwave-main?"+Date.now();
         $("#main-audio")[0].play();
     }
     else{
@@ -59,7 +59,7 @@ function toggle_mute(mute){
 }
 
 function updateMetadata(){
-    $.get("http://radio.ivan.moe:420/status-json.xsl", function(a){
+    $.get("http://radio.ivan.moe/icecast/status-json.xsl", function(a){
         console.log(a);
     });
 }

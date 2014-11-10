@@ -1,0 +1,185 @@
+#noscript{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    z-index: 1000;
+    text-align: center;
+    font-family: monospace;
+    background-color: #111;
+    color: #CCC;
+    line-height: 300px;
+}
+
+body{
+    background-color: #111;
+    color: #00FFFF;
+    font-family: sans-serif;
+    text-align: center;
+}
+a, a:hover, a:active, a:visited{
+    color: inherit;
+    text-decoration: underline;
+}
+a:hover, a:active{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 70px;
+}
+p{
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+table{
+    width: 100%;
+    height: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table tr{
+    vertical-align: top;
+}
+
+#banner{
+    width: 200px;
+}
+
+#side{
+    width: 200px;
+    overflow: hidden;
+}
+
+#side table{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#header{
+    font-family: serif;
+    font-size: 10px;
+    line-height: 15px;
+    color: #999;
+}
+
+#side table{
+    width: 200px;
+    height: 100%;
+    z-index: 5;
+}
+
+#side table .player{
+    vertical-align: bottom;
+}
+
+#player{
+    position: relative;
+    min-height: 225px;
+    width: 200px;
+}
+
+#player .image{
+    width: 200px;
+    height: 200px;
+    background-image: url("img/blank-cd.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: middle;
+}
+
+#player .info{
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+#player .info .artist{
+    color: #DDD;
+    font-weight: bold;
+}
+
+#player .info .title{
+    color: #AAA;
+    font-size: 0.9em;
+}
+
+#player .controls{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: left;
+}
+
+#player .controls > div{
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    float: left;
+}
+
+#player .controls .play,
+#player .controls .pause{
+    width: 75px;
+    color: #DDD;
+    background-color: rgba(100,100,100,0);
+}
+
+#player .controls .play:hover,
+#player .controls .pause:hover{
+    background-color: rgba(100,100,100,0.3);
+}
+
+#player .controls .play:active,
+#player .controls .pause:active{
+    background-color: rgba(100,100,100,0.1);
+}
+
+#player .controls .pause{
+    display: none;
+}
+
+#player .controls .mute,
+#player .controls .unmute{
+    width: 30px;
+    color: #DDD;
+}
+
+#player .controls .unmute{
+    display: none;
+    color: #D44;
+}
+
+#player .controls .volume{
+    width: 90px;
+    line-height: 25px;
+    cursor: default;
+}
+
+#volume-control{
+    margin-left: 3px;
+    width: 80px;
+    height: 25px;
+    vertical-align: top;
+}
+
+audio{
+    display: none;
+}

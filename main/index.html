@@ -1,0 +1,89 @@
+<!doctype html>
+<title>Virtual Plaza Radio</title>
+<meta charset='utf-8'>
+<link rel='stylesheet' href='font-awesome/css/font-awesome.min.css'>
+<link rel='stylesheet' href='normalize.css'>
+<link rel='stylesheet' href='main.css'>
+<script src='jquery.min.js'></script>
+<script src='main.js'></script>
+<noscript>
+    <style>
+        body, html{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    </style>
+</noscript>
+<table>
+    <tbody>
+        <tr>
+            <td id='side'>
+                <div class='filler'></div>
+                <table>
+                    <tbody>
+                        <!-- banner -->
+                        <tr class='banner'>
+                            <td>
+                                <img id='banner'>
+                                <script>
+                                    var bannerSources = [
+                                        "plaza-v1.jpg"
+                                    ];
+                                    (function(){
+                                        var bnr = "banners/"+bannerSources[Math.floor(Math.random()*bannerSources.length)];
+                                        document.getElementById("banner").src = bnr;
+                                    })();
+                                </script>
+                            </td>
+                        </tr>
+                        <!-- music player -->
+                        <tr class='player'>
+                            <td>
+                                <div id='player'>
+                                    <div class='image'></div>
+                                    <div class='info'>
+                                        <div class='artist'>Unknown Artist</div>
+                                        <div class='title'>Unknown Title</div>
+                                    </div>
+                                    <div class='bar'>
+                                        <span class='time'></span>
+                                    </div>
+                                    <div class='controls fa'>
+                                        <div class='play fa-play'></div><!--
+                                     --><div class='pause fa-pause'></div><!--
+                                     --><div class='mute fa-volume-up'></div><!--
+                                     --><div class='unmute fa-volume-off'></div><!--
+                                     --><div class='volume'>
+                                            <input type="range" min="0" max="100" value="100" id="volume-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td id='content'>
+                <h1>virtual plaza radio</h1>
+                <h3>v0.1.0</h4>
+                <h4>direct stream: <a href='http://radio.ivan.moe:420/vaporwave-main'>http://radio.ivan.moe:420/vaporwave-main</a></h6>
+                <br><br><br>
+                <p>
+                this radio is currently a shuffled playlist of <a href='http://files.sq10.net/music/vaporwave/'>the vaporwave library 
+                project 
+                archive clone</a>
+                <br>
+                quality not 100% guaranteed, will likely play off-genre music. please <a href='mailto:ivan@ivan.moe'>email me</a> if you find offending music so i can remove it
+                <br>
+                this website was made in 5 minutes, so huge improvements are going to be implemented soon&#8482;
+                <br><br><br>
+                powered by icecast
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<audio id='main-audio' autoplay src='http://radio.ivan.moe:420/vaporwave-main?420' type='audio/mp3'>your browser doesn't support &lt;audio&gt;</audio>
+<noscript><div id='noscript'>please enable javascript</div></noscript>

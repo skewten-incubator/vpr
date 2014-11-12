@@ -43,7 +43,7 @@ function toggle_play_icon(playing){
 
 function toggle_play(play){
     if (play){
-        $("#main-audio")[0].src = "http://radio.ivan.moe/icecast/vaporwave-main?"+Date.now();
+        $("#main-audio")[0].src = "/icecast/vaporwave-main?"+Date.now();
         $("#main-audio")[0].play();
     }
     else{
@@ -65,7 +65,7 @@ function toggle_mute(mute){
 }
 
 function updateMetadata(){
-    $.get("http://radio.ivan.moe/icecast/status-json.xsl", function(data){
+    $.get("/icecast/status-json.xsl", function(data){
         var song = data.icestats.source.title.split(" - ");
         $("#player .artist").text(song.shift());
         $("#player .title").text(song.join(" - "));

@@ -22,7 +22,13 @@ $(function(){
     });
     setInterval(updateMetadata, 5000);
     updateMetadata();
+    loadPlayer();
 });
+
+function loadPlayer(){
+    $("#main-audio")[0].volume = $("#volume-control").val()/100;
+    $("#main-audio")[0].play();
+}
 
 function toggle_play_icon(playing){
     if (playing){

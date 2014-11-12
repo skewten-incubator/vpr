@@ -15,10 +15,16 @@
 
 body{
     background-color: #111;
-    color: #00FFFF;
+    color: #000;
+    text-align: center;
     font-family: sans-serif;
-    text-align: left;
+    background-image: url('img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 a, a:hover, a:active, a:visited{
     color: inherit;
     text-decoration: underline;
@@ -34,6 +40,10 @@ p{
     font-size: 10px;
     font-weight: bold;
     opacity: 0.8;
+}
+
+#front{
+    text-shadow: 0px 0px 2px rgba(236, 146, 239, 1);
 }
 
 body, html{
@@ -189,4 +199,16 @@ audio{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding-left: 10px;
+}
+
+#version{
+    vertical-align: super;
+    font-size: 12px;
+}
+
+#irc{
+    border:0;
+    width:100%;
+    height:100%;
+    min-height:600px;
 }

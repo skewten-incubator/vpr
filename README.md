@@ -20,6 +20,7 @@ This repository is broken down into three folders:
 * `icecast` - The Icecast XSL files and sample config
 * `daemon` - Node.js app for monitoring the radio
 * `web` - The static HTML files for the website
+* `update-vpr-data` - A shell script that wget's the API's /_/icecheck route
 
 <a name='setup'></a>
 
@@ -46,6 +47,7 @@ ncmpcpp, to control mpd.
 <a name='authors'></a>
 
 made by Ivan K <ivan@ivan.moe>
+
 favicon made by ??? (will have the name soon)
 
 
@@ -54,7 +56,7 @@ favicon made by ??? (will have the name soon)
 license
 ---
 
-MIT.
+MIT
 
 <a name='contributing'></a>
 

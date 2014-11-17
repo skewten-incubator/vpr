@@ -43,7 +43,7 @@ function toggle_play_icon(playing){
 
 function toggle_play(play){
     if (play){
-        $("#main-audio")[0].src = "/icecast/vaporwave-main?"+Date.now();
+        $("#main-audio")[0].src = "/icecast/vpr-playlist?"+Date.now();
         $("#main-audio")[0].play();
     }
     else{

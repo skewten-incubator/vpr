@@ -1,0 +1,2 @@
+#!/bin/bash
+wget -qO- localhost:10420/_/icecheck &> /dev/null

@@ -1,0 +1,27 @@
+{
+    "name": "vpr",
+    "version": "0.0.1",
+    "description": "daemon for the Virtual Plaza Radio",
+    "author": {
+        "name": "Ivan"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Strat-/vpr"
+    },
+    "dependencies": {
+        "express": "~4.10.2",
+        "body-parser": "~1.9.2",
+        "step": "~0.0.5",
+        "komponist": "~0.1.0",
+        "musicmetadata": "~0.6.0",
+        "ws": "~0.4.32",
+        "request": "~2.48.0"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/Strat-/vpr/blob/master/LICENSE"
+        }
+    ]
+}

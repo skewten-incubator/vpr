@@ -13,15 +13,18 @@ module.exports = function(port){
         ws.on('open', function(){
             ws.send('hi');
         });
-        ws.on('message', parse_message);
+        ws.on('message', function(msg, flgs){
+            parse_message(msg, flgs, ws);
+        });
     });
     /////
     console.log("[socket] listening on port "+port);
     status.mod_ready("socket");
 }
 
-function parse_message(msg, flgs){
+function parse_message(msg, flgs, ws){
     console.log("[socket] got message");
     console.log(msg);
     console.log(flgs);
+    ws.send("okay");
 }

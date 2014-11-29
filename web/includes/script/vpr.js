@@ -1,11 +1,11 @@
 var player,
+    socket,
     isPlaying = false;
 
 $(function(){
     attach_handlers();
-    
+    attach_socket();    
     load_player();
-
     setInterval(update_metadata, 5000);
     update_metadata();
 });
@@ -46,6 +46,24 @@ function attach_handlers(){
     $(".vpr-player .unmute").on("click", function(){
         toggle_mute(false);
     });
+}
+
+function attach_socket(){
+    socket = new WebSocket("ws://"+window.location.host+"/ws");
+    socket.onopen = function(evt){
+        console.log("socket open");
+        ws.send("hi");
+    };
+    socket.onmessage = function(evt){
+        console.log(evt.data);
+    };
+    socket.onerror = function(evt){
+        console.log("an error occured");
+        console.log(evt);
+    };
+    socket.onclose = function(evt){
+        console.log("socket closed");
+    };
 }
 
 function load_player(){
@@ -99,11 +117,10 @@ function update_metadata(){
         type: "GET",
         url: "/_/info"
     }).done(function(data){
-        return;
-        //TODO
-        var song = data.icestats.source.title.split(" - ");
-        $(".vpr-player .artist").text(song.shift());
-        $(".vpr-player .title").text(song.join(" - "));
+        $(".vpr-status .kbps").text(data.mpd.bitrate+"kbps");
+        
+        $(".vpr-player .artist").text(data.song.artist);
+        $(".vpr-player .title").text(data.song.title);
     }).fail(function(a, b, error){
         $(
             ".vpr-status .listeners,"+

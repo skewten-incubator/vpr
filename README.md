@@ -36,6 +36,7 @@ Icecast, running on port 420. See the (modified) config in `icecast/icecast.xml`
 nginx, with the `web` folder files as root.
 The `/icecast/` directory is a proxy to the Icecast web daemon.
 The `/_/` directory is a proxy to the Node.js web daemon.
+The `/ws/` directory is a proxy to the Node.js daemon WebSocket.
 
 Node.js for the daemon, that monitors the radio and provides accurate
 information about the current song, DJ, and whatnot.

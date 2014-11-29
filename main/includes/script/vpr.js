@@ -5,19 +5,19 @@ $(function(){
     $("#main-audio").on("abort", function(){
         toggle_play_icon(false);
     });
-    $("#player .controls .play").on("click", function(){
+    $(".vpr-player .play").on("click", function(){
         toggle_play(true);
     });
-    $("#player .controls .pause").on("click", function(){
+    $(".vpr-player .pause").on("click", function(){
         toggle_play(false);
     });
     $("#volume-control").on("input", function(){
         $("#main-audio")[0].volume = this.value/100;
     });
-    $("#player .controls .mute").on("click", function(){
+    $(".vpr-player .mute").on("click", function(){
         toggle_mute(true);
     });
-    $("#player .controls .unmute").on("click", function(){
+    $(".vpr-player .unmute").on("click", function(){
         toggle_mute(false);
     });
     setInterval(updateMetadata, 5000);
@@ -32,12 +32,12 @@ function loadPlayer(){
 
 function toggle_play_icon(playing){
     if (playing){
-        $("#player .controls .pause").show();
-        $("#player .controls .play").hide();
+        $(".vpr-player .pause").show();
+        $(".vpr-player .play").hide();
     }
     else{
-        $("#player .controls .pause").hide();
-        $("#player .controls .play").show();
+        $(".vpr-player .pause").hide();
+        $(".vpr-player .play").show();
     }
 }
 
@@ -54,12 +54,12 @@ function toggle_play(play){
 
 function toggle_mute(mute){
     if (mute){
-        $("#player .controls .mute").hide();
-        $("#player .controls .unmute").show();
+        $(".vpr-player .mute").hide();
+        $(".vpr-player .unmute").show();
     }
     else{
-        $("#player .controls .mute").show();
-        $("#player .controls .unmute").hide();
+        $(".vpr-player .mute").show();
+        $(".vpr-player .unmute").hide();
     }
     $("#main-audio")[0].muted = mute;
 }

@@ -1,0 +1,54 @@
+table#vpr-mobile-wrapper
+    tr
+        td
+            #vpr-mobile.w98-window
+                .w98-inner
+                    table
+                        tr
+                            td.w98-header
+                                .w98-icon.vpr-mobile-icon
+                                | Virtual Plaza Radio - リラックス
+                                .w98-buttons
+                        tr
+                            td.w98-actions
+                                | Listeners: 
+                                span.listeners 42
+                                |&nbsp;
+                                | Bitrate: 
+                                span.kbps 320kbps
+                                |&nbsp;
+                                | DJ: 
+                                span.dj playlist
+                        tr
+                            td.w98-content
+                                .w98-inner-content.vpr-mobile-background
+                                    table#vpr-mobile-player.vpr-player
+                                        tr
+                                            td
+                                                .artist Loading...
+                                        tr
+                                            td
+                                                .title 
+                                        tr
+                                            td
+                                                img.art(
+                                                    src="/img/blank-cd.png"
+                                                )
+                                        tr
+                                            td
+                                                table.controls
+                                                    tr
+                                                        td
+                                                            .play.button play
+                                                            .pause.button pause
+                                                        td
+                                                            .mute.button mute
+                                                            .unmute.button unmute
+                                                        td.volume-td
+                                                            input.volume(
+                                                                type="range",
+                                                                min="0",
+                                                                max="100",
+                                                                value="100",
+                                                                id="volume-control"
+                                                            )

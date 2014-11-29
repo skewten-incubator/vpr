@@ -1,3 +1,69 @@
+#vpr-mobile-wrapper{
+    height: 100%;
+    width: 100%;
+    & > tbody > tr > td{
+        vertical-align: middle;        
+    }
+}
+#vpr-mobile{
+    width: 280px;
+    margin: 0 auto;
+    .vpr-mobile-icon{
+        background-image: url("/img/icon.png");
+    }
+    .vpr-mobile-background{
+        //background-image: url("/img/bg.jpg");
+        background-color: inherit;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+#vpr-mobile-player{
+    &, & td{
+        border: 5px solid #C0C0C0;
+    }
+    & td{
+        margin: 0;
+        padding: 0;
+    }
+    border-collapse: collapse;
+    background: black;
+    color: #29E53C;
+    font-family: monospace;
+
+    .artist, .title{
+        line-height: 25px;
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+
+    td{
+        vertical-align: middle;
+    }
+
+    td.volume-td{
+        width: 120px;
+    }
+
+    .button{
+        cursor: pointer;
+    }
+
+    .pause, .unmute{
+        display: none;
+    }
+
+    .art{
+        padding: 10px 0;
+        max-width: 150px;
+    }
+}
+
 #noscript{
     position: fixed;
     top: 0;
@@ -18,7 +84,7 @@ body{
     color: #000;
     text-align: center;
     font-family: sans-serif;
-    background-image: url('img/bg.jpg');
+    background-image: url('/img/bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +103,7 @@ h1{
     font-size: 70px;
 }
 p{
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
     opacity: 0.8;
 }
@@ -106,7 +172,7 @@ table tr{
 #player .image{
     width: 200px;
     height: 200px;
-    background-image: url("img/blank-cd.png");
+    background-image: url("/img/blank-cd.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: middle;

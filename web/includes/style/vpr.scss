@@ -63,6 +63,11 @@
         padding: 10px 0;
         max-width: 150px;
     }
+
+    .controls td:not(.mute-td){
+        border-left: none;
+        border-right: none;
+    }
 }
 
 .vpr-player .error{

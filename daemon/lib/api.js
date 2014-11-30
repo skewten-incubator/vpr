@@ -76,7 +76,7 @@ function update_icecast_data(){
 }
 
 function authenticate_streamer(req, res){
-    console.log("authentication request");
+    console.log("[auth] got request");
     console.log(req.body);
     res.set("icecast-auth-user", 1);
     res.send("ok");

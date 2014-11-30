@@ -30,3 +30,14 @@
   audio: '44100:24:2',
   nextsong: '2931',
   nextsongid: '2932' }
+
+//auth
+/*
+    user: ayy
+    pass: lmao
+    server: ivan.moe
+    port: 420
+    action: stream_auth
+    mount: /vpr-dj
+    ip: 42.42.42.42
+*/

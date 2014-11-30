@@ -52,7 +52,7 @@ function attach_socket(){
     socket = new WebSocket("ws://"+window.location.host+"/ws");
     socket.onopen = function(evt){
         console.log("socket open");
-        ws.send("hi");
+        socket.send("hi");
     };
     socket.onmessage = function(evt){
         console.log(evt.data);

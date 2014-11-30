@@ -19,6 +19,8 @@ module.exports = function(port){
     for (var i=0;i<routes.length;i++){
         router.get(routes[i], handlers[routes[i]]);
     }
+
+    router.post("/auth", authenticate_streamer);
     
     app.use('/_/', router);
     app.listen(port);
@@ -71,4 +73,11 @@ function update_icecast_data(){
             }catch(e){}
         }
     });
+}
+
+function authenticate_streamer(req, res){
+    console.log("authentication request");
+    console.log(req.body);
+    res.set("icecast-auth-user", 1);
+    res.send("ok");
 }

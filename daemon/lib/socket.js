@@ -10,9 +10,7 @@ module.exports = function(port){
     };
     
     wss.on('connection', function(ws){
-        ws.on('open', function(){
-            ws.send('hi');
-        });
+        ws.send('hi');
         ws.on('message', function(msg, flgs){
             parse_message(msg, flgs, ws);
         });
@@ -23,8 +21,9 @@ module.exports = function(port){
 }
 
 function parse_message(msg, flgs, ws){
+    if (msg == "u")
+        return;
     console.log("[socket] got message");
     console.log(msg);
-    console.log(flgs);
     ws.send("okay");
 }

@@ -55,6 +55,10 @@ function attach_socket(){
         socket.send("hi");
     };
     socket.onmessage = function(evt){
+        if (evt.data == "u"){
+            socket.send("u");
+            return;
+        }
         console.log(evt.data);
     };
     socket.onerror = function(evt){

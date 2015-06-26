@@ -20,7 +20,7 @@ This repository is broken down into three folders:
 * `icecast` - The Icecast XSL files and sample config
 * `daemon` - Node.js app for monitoring the radio
 * `web` - The static HTML files for the website
-* `update-vpr-data` - A shell script that wget's the API's /_/icecheck route
+* `update-vpr-data` - A shell script that wgets the API's /_/icecheck route
 
 <a name='setup'></a>
 

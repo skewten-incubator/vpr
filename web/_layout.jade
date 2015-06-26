@@ -8,9 +8,16 @@ html(lang="en")
 
         link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
         link(rel="icon", href="favicon.ico", type="image/x-icon")
-
-        link(rel="stylesheet", href="main.css")
+        
         script(src="lib/js/jquery.min.js")
         script(src="lib/js/vpr.js")
+            
+        link(rel="stylesheet", href="lib/css/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="lib/css/normalize.css")
+        link(rel="stylesheet", href="lib/css/w98.css")
+        link(rel="stylesheet", href="lib/css/vpr.css")
+        noscript
+            link(rel="stylesheet", href="includes/style/noscript.css")
+        
     body
         != yield

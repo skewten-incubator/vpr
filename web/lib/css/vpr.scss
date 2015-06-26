@@ -9,7 +9,7 @@
     width: 280px;
     margin: 0 auto;
     .vpr-mobile-icon{
-        background-image: url("/img/icon.png");
+        background-image: url("img/icon.png");
     }
     .vpr-mobile-background{
         background-color: inherit;
@@ -103,7 +103,7 @@ body{
     color: #000;
     text-align: center;
     font-family: sans-serif;
-    background-image: url('/img/bg.jpg');
+    background-image: url('img/bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -189,7 +189,7 @@ audio{
 #player .image{
     width: 200px;
     height: 200px;
-    background-image: url("/img/blank-cd.png");
+    background-image: url("img/blank-cd.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: middle;

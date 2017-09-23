@@ -1,6 +1,6 @@
 [package]
-name = "new-daemon"
+name = "vpr-daemon"
 version = "0.1.0"
-authors = ["Ivan K <ivan.k@discordapp.com>"]
+authors = ["Ivan K <ivan@sq10.net>"]
 
 [dependencies]
